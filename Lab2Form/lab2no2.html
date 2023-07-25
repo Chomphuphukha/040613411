@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            input[type="text2"]{
+                height: 50px;
+            }
+            div{
+                padding: 5px;
+                margin-top: 20px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="form-echo.php" method="get" accept-charset="utf-8">
+        <h2>แบบฟอร์มจองทัวร์</h2>
+        <div>
+        <p>ข้อมูลทั่วไป</p>
+        ชื่อ-สกุล:
+        <br><input type="text"
+        name="firstname-lastname"
+        placeholder="กรอกชื่อ-สกุล" required
+        >
+        
+        <br>E-mail:
+        <br><input type="email"
+        name="E-mail"
+        >
+        
+        <br>โทรศัพท์:
+        <br><input type="tel"
+        name="phone"  id="phone"  
+        >
+        <script>
+            document.getElementById('phone').value='+66';
+        </script>
+
+        <br>ที่อยู่:
+        <br><input type="text2" size="30"
+        name="address"
+        >
+
+        <br>รหัสไปรษีย์: <input type="text"
+        name="postcode" size="5"
+        pattern="\d{5}">
+        
+        <br>รูปผู้จอง: <input type="file" accept="image" name="file">
+        </div>
+        <div>
+        <p>ข้อมูลเข้าส่ระบบ</p>
+        Username:
+        <br><input type="text" name="Username" minlength="8"
+        pattern="\d\w">
+        <br><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่8ตัวขึ้นไป</i>
+        
+        <p>Password:
+        <br><input type="password" name="password" minlength="8"
+        pattern="\w">
+        <br><i>ประกอบด้วยอักขระอะไรก็ได้8ตัวขึ้นไป</i>
+        </div>
+
+        <div>
+        <p>ข้อมูลที่ต้องการ</p>
+        <label>แพคเก็จทัวร์:</label>
+        <select name="package tour">
+            <option value="">--select--</option>
+        </select>
+
+        <br>วันที่เดินทาง:<input type="date" name="travel date">
+        
+        <br>จำนวนผู้เดินทาง:<input type="number" name="traveller" min="1" max="10">
+        
+        <br>เน้นการท่องเที่ยวแบบใด?
+        <br><input type="checkbox">ชอปปิ้ง
+        <br><input type="checkbox">ธรรมชาติ
+        <br><input type="checkbox">ทะเล
+        </div>
+
+        <p>ยอมรับเงื่อนไขและข้อตกลง
+        <input type="radio" name="agree">I agree
+        <input type="radio" name="disagree"> I disagree
+        &emsp;<input type="submit" name="book" value="จอง">
+        </form>
+    </body>
+</html>

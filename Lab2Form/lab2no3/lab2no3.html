@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .login-form{
+                width: 257px;
+                border: 1px solid black;
+                padding: 1px;
+            }
+            .bord{
+                margin: 1px;
+            }
+            .login-button{
+                display: inline-block;
+                background-color:lightgray;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .login-button img{
+                width: 35px;
+                vertical-align: middle;
+            }
+            .butlog{
+                width: 257px;
+                border: 1px solid black;
+                padding: 1px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h2>เข้าสู่ระบบ</h2>
+        <div class="login-form">
+            <label class="bord" style="border:solid 2px;">Username: </label>
+            <input type="text" id="username" name="username" required>
+            
+            <br><label class="bord" style="border: solid 2px;">Password: </label>
+            <input type="password" id="password" name="password" required>
+        </div>   
+
+        <div class="butlog">
+            <br><label class="bord">กรุณาพิมพ์ตามตัวเลขที่ปรากฎ: </label><br>1559
+            <br><input type="text" id="verify" name="verify" pattern="1559" required>   
+        </div> 
+            <p><button class="login-button" >
+                <a href="logout page.html"><img src="loginbutton.png" alt="Login"></a>
+          
+            </button>
+         
+    </body>
+
+</html>

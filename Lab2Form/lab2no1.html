@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table{
+            border-collapse: collapse;
+            with: 100%;
+        }
+        th,td{
+            border: 1px solid green;
+            padding: 8px;
+            text-align: justify;
+        }
+        th{
+            background-color: lightgreen;
+        }
+        tr:nth-child(odd){
+            background-color: lightgreen;
+        }
+        tr:nth-child(even){
+            background-color: rgb(192, 235, 192);
+        }
+    </style>
+</head>
+<body>
+    <form action="form-echo.php" method="get" accept-charset="utf-8">
+    <table>
+        <tr>
+            <th></th>
+            <th>ตัวอย่างข้อมูล</th>
+            <th>Input type?</th>
+        </tr>
+        <tr2>
+            <td>1.</td>
+            <td>ชื่อเต็ม/ย่อของสาขาวิชา</td>
+            <td><input type="text" pattern="\w"></td>
+        </tr2>
+        <tr>
+            <td>2.</td>
+            <td>จำนวนเงินที่โอน</td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>อาหารที่ชื่นชอบ5ชนิดที่ชื่นชอบจากมากไปน้อย</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>ค่าไฟฟ้า3เดือนที่ผ่านมา</td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>รหัสบัตรประชาชน</td>
+            <td><input type="text" pattern="\d" maxlength="13"></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>ความพึงพอใจของหนังสือเล่มนี้</td>
+            <td><input type="radio" value="5" checked="checked">5<input type="radio" value="4">4<input type="radio" value="3">3<input type="radio" value="2">2<input type="radio" value="1">1</td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>อาการป่วย</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่</td>
+            <td><input type="radio" value="Y" checked="checked">Y<input type="radio" value="N" >N</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>รหัสผ่าน</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</td>
+            <td><input type="time">Start<input type="time">End</td>
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td>วันเวลาที่ต้องไปพบแพทย์</td>
+            <td><input type="datetime-local"></td>
+        </tr>
+       
+    </table>
+    </form>
+</body>
+</html>
