@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function handleInputBlur(inputId) {
+  var inputElement = document.getElementById(inputId);
+  if (inputElement.value.trim() !== "") {
+    inputElement.style.color = "green";
+  } else {
+    inputElement.style.color = "";
+  }
+}
+</script>
+</head>
+<body>
+    <h1>Register</h1>
+    Name: <input type="text" id="name" onblur="handleInputBlur('name')"><br>
+    Age: <input type="text" id="age" onblur="handleInputBlur('age')"><br>
+    Birthdate: <input type="text" id="bday" onblur="handleInputBlur('bday')"><br>
+    <input type="Submit" onclick="checkPassword()">
+    <div id="errormsg"></div>
+</body>
+</html>
